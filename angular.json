@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontshopfalcon"
+    }
+  },
+  "defaultProject": "frontshopfalcon",
+  "cli": {
+    "analytics": false
+  }
 }
