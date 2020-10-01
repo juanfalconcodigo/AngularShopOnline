@@ -1,0 +1,9 @@
+@import '../../../pages/admin.component.scss';
+#menu-toggle {
+    background-color: transparent;
+    color: $admin-primary-color;
+    border: none;
+    &:focus {
+        box-shadow: none;
+    }
+}

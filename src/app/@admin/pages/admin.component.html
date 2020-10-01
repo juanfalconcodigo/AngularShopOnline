@@ -1,7 +1,14 @@
-<h1>Admin</h1>
-<ul>
-    <li><a [routerLink]="['home']">Volver al home</a></li>
-    <li><a [routerLink]="['/admin']">Admin</a></li>
-    <li><a [routerLink]="['user']">User</a></li>
-</ul>
-<router-outlet></router-outlet>
+<!-- <div class="d-flex" id="wrapper" #wrapper [ngClass]="{'toggled':!show}"> -->
+<div class="d-flex" id="wrapper" #wrapper>
+    <!-- <app-admin-sidebar id="sidebar-wrapper"></app-admin-sidebar> -->
+    <app-admin-sidebar *ngIf="show"></app-admin-sidebar>
+    <div id="page-content-wrapper">
+
+        <app-admin-header (toogleEmit)="changeValueShow($event)"></app-admin-header>
+        <div class="container-fluid">
+            <app-admin-title></app-admin-title>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>

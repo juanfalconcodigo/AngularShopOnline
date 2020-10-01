@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-
+  show: boolean = true;
   constructor() { }
 
+
   ngOnInit(): void {
+  }
+
+
+  changeValueShow(event: boolean) {
+    this.show = event;
+    console.log(this.show)
   }
 
 }
